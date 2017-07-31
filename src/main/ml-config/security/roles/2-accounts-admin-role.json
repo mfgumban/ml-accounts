@@ -1,0 +1,5 @@
+{
+  "role-name" : "accounts-admin-role",
+  "description" : "Manages accounts.",
+  "role" : [ "accounts-role", "rest-reader" ]
+}

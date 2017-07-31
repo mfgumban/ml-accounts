@@ -1,0 +1,5 @@
+{
+  "role-name" : "accounts-role",
+  "description" : "Can read account information.",
+  "role" : [ "rest-reader" ]
+}

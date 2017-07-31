@@ -1,0 +1,28 @@
+# Accounts Service
+
+## Overview
+
+The goal of this project is to provide basic account management functions for MarkLogic.  Currently a WIP.
+
+## Requirements
+* A supported version of [MarkLogic](https://github.com/marklogic/roxy/wiki/Supported-MarkLogic-versions)
+* Gradle
+* ml-gradle
+
+## Notes
+
+* An account is represented by an account document.  It has a 1:1 relationship with an ML user.
+* A user with an account-admin-role can create an account.
+* Newly created accounts start off as deactivated.
+* The intended person must activate the account using a randomly generated activation code.
+* The activation code is intended to be sent via email, SMS, or other communication mechanism.
+* An ML user is created when an account is activated.
+* The ML user is removed when the account is deactivated.
+* Deactivated accounts can be reactivated again, but require a new activation code and a new password
+
+## TODO
+
+* Work on the custom rewriter.
+* Add "group" functions to determine which role(s) a user gets based on their group affiliations.
+* Add dynamic role generation for groups
+* Decouple content database from "service" app servers.
